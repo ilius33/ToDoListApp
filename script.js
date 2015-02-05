@@ -18,7 +18,12 @@ angular.module('ToDoList', [])
     };
 
     $scope.saveTask = function () {
-      $scope.tasks.push({text:this.new_task,done:false});
+      if (this.new_task!=undefined)
+      {
+        console.log(this.new_task);
+        $scope.tasks.push({text:this.new_task,done:false});
+        this.new_task=undefined;
+      }
     };
 
   }]);
