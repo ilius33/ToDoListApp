@@ -1,0 +1,12 @@
+body {
+	background-color:rgb(241, 241, 241);
+}
+
+.todo-list {
+	-moz-box-shadow: 2px 2px 9px 0px #ccc;
+	-webkit-box-shadow: 2px 2px 9px 0px #ccc;
+	box-shadow: 2px 2px 9px 0px #ccc;
+	width:100px;
+	height: 100px;
+	background-color:white;
+}
