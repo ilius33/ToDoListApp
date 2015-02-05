@@ -7,7 +7,26 @@
 <body>
 
    	<div ng-app="ToDoList" class="todo-list">
-   			
+		<div class="todo-list-row ">
+			<div class="todo-list-check-col"></div>
+			<div class="todo-list-text-col todo-list-text-col_heading">I want to...</div>
+		</div>
+		<div class="todo-list-row">
+			<div class="todo-list-check-col"><input type="checkbox" checked></div>
+			<div class="todo-list-text-col todo-list-text-col_done">task 1task 1task 1task 1task 1task 1task 1task 1task 1task 1task 1task 1</div>
+		</div>
+		<div class="todo-list-row">
+			<div class="todo-list-check-col"><input type="checkbox"></div>
+			<div class="todo-list-text-col">task 2</div>
+		</div>
+		<div class="todo-list-row">
+			<div class="todo-list-check-col"><input type="checkbox"></div>
+			<div class="todo-list-text-col"><input class="todo-list-input" type="text"></div>
+		</div>
+		<div class="todo-list-row">
+			<div class="todo-list-check-col"></div>
+			<div class="todo-list-text-col todo-list-text-col_footer">3 task(s) remaining</div>
+		</div>
    	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>

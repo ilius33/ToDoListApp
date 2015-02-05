@@ -2,11 +2,60 @@ body {
 	background-color:rgb(241, 241, 241);
 }
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 .todo-list {
 	-moz-box-shadow: 2px 2px 9px 0px #ccc;
 	-webkit-box-shadow: 2px 2px 9px 0px #ccc;
 	box-shadow: 2px 2px 9px 0px #ccc;
-	width:100px;
-	height: 100px;
-	background-color:white;
+	background-color: white;
+	width: 400px;
+}
+
+.todo-list-row {
+	border-bottom: 1px solid rgb(214,214,214);
+	display: table;
+	width: 100%;
+}
+
+.todo-list-check-col {
+	width:50px;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.todo-list-text-col {
+	border-left: 4px double rgb(247,211,216);
+	padding-left: 10px;
+	font: italic 14pt 'Roboto Condensed', sans-serif;
+	width: 350px;
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow:ellipsis;
+	line-height: 40px;
+}
+
+.todo-list-text-col_heading {
+	font-size: 16pt;
+	color:rgb(214,214,214);
+	line-height: 70px;
+}
+
+.todo-list-text-col_footer {
+	font-size: 10pt;
+	font-style: normal;
+	color:rgb(160,160,160);
+	line-height: 70px;
+}
+
+.todo-list-text-col_done {
+	text-decoration: line-through;
+}
+
+.todo-list-input {
+	border:none;
+	font: italic 14pt 'Roboto Condensed', sans-serif;
+	width: 100%;
+	outline: none;
 }
