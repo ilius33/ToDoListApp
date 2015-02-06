@@ -1,9 +1,9 @@
-angular.module('ToDoList', [])
-  .controller('ToDoListController', ['$scope', function($scope) {
-    $scope.tasks = [
-      {text:"very long text first task already done very long text first task already done", done:true},
-      {text:"second task", done:false}
-    ];
+angular.module('ToDoList', ['mongo'])
+  .controller('ToDoListController', ['mongoList','$scope', function(mongoList, $scope) {
+    $scope.tasks = [];
+    mongoList.getTasks.then(function (response) {
+        $scope.tasks = response.data;
+    });
 
     $scope.remaining = function() {
       var count = 0;
@@ -15,13 +15,14 @@ angular.module('ToDoList', [])
 
     $scope.completeTask = function($event, task){
       task.done=!task.done;
+      mongoList.updateTask(task);
     };
 
     $scope.saveTask = function () {
       if (this.new_task!=undefined)
       {
-        console.log(this.new_task);
         $scope.tasks.push({text:this.new_task,done:false});
+        mongoList.addTask({text:this.new_task,done:false});
         this.new_task=undefined;
       }
     };
